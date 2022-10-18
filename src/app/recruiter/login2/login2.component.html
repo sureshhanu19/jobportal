@@ -1,0 +1,63 @@
+
+
+<section class="form-login">
+ 
+ <div *ngIf="isSubmitted" class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Success!</strong> You Login has been succcesful!.
+  <button (click)="closeAlert()" type="button" class="btn-close" data-bs-dismiss="alert"
+    aria-label="Close"></button>
+</div>
+<div *ngIf="isSubmitted2" class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Failed!</strong> You have not not Registered!.
+  <button (click)="closeAlert2()" type="button" class="btn-close" data-bs-dismiss="alert"
+    aria-label="Close"></button>
+</div>
+
+<form action="" method="post" name="login" [formGroup]="RloginForm" (ngSubmit)="onLogin()">
+  <div class="log">
+  <div class="login">
+    <h1>Login</h1>
+    <hr>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1" class="form-label">Company Name</label>
+    <input type="text" name="companyName" class="form-control" placeholder="Enter Company name" formControlName="companyName" [ngClass]="{'fieldInvalid':'(minlength)||(required)'}">
+  </div>
+
+  <div *ngIf="RloginForm.controls['companyName'].hasError('required')" class="text-danger">
+    Company Name is required</div>
+  <div *ngIf="RloginForm.controls['companyName'].hasError('companyName')" class="text-danger">
+    Company Name must be atleast 5 characters</div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1" class="form-label">Password</label>
+    <input [type]="changetype?'password':'text'" name="Password" class="form-control" placeholder="Enter Password" formControlName="Password"[ngClass]="{'fieldInvalid':'(pattern)||(required)'}">
+    <span class="eyeicon" (click)="onvisible()">
+      <i [ngClass]="visible?'fa fa-eye':'fa fa-eye-slash'" ></i>
+     
+    </span>
+  
+
+
+  </div>
+
+  
+  <div *ngIf="RloginForm.controls['Password'].hasError('required')" class="text-danger">
+    Password required</div>
+
+  <div class="col-md-12 text-center">
+    <button type="submit" class=" btn btn-block mybtn btn-success tx-tfm">Login</button>
+  </div>
+  <div class="col-md-12 ">
+    <div class="login-or">
+      <hr class="hr-or">
+      <span class="span-or">(or)</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <p class="text-center">Don't have account? <a routerLink="/recruiter/register2" >Sign up
+        here</a></p>
+  </div>
+</div>
+</form>
+</section> 

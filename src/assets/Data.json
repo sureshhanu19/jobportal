@@ -1,0 +1,81 @@
+{
+  "recuiterDetails": [
+    {
+      "companyName": "itsuresh",
+      "password": "suresh19@",
+      "companyMail": "hanumanthusuresh1993@gmail.com",
+      "industryType": "it",
+      "yearsofExp": 5,
+      "About": "developer",
+      "id": 1
+    },
+    {
+      "companyName": "itsol",
+      "password": "suresh@19",
+      "companyMail": "hemasundar345@gmail.com",
+      "industryType": "ECE",
+      "yearsofExp": 4,
+      "About": "developer",
+      "id": 2
+    }
+  ],
+  "jobData": [
+    {
+      "jobtitle": "web developer",
+      "joblocation": "hyd",
+      "jdesc": "module developer",
+      "skills": "angular",
+      "recId": "1",
+      "id": 1
+    },
+    {
+      "jobtitle": "web desginer",
+      "joblocation": "beng",
+      "jdesc": "module desginer",
+      "skills": "angular react",
+      "recId": "2",
+      "id": 2
+    },
+    {
+      "jobtitle": "Angular Developer",
+      "joblocation": "hyd",
+      "jdesc": "work from home",
+      "skills": "Angular 12",
+      "recId": "1",
+      "id": 3
+    },
+    {
+      "jobtitle": "web developer",
+      "joblocation": "vizag",
+      "jdesc": "work from office",
+      "skills": "html css ",
+      "recId": "1",
+      "id": 4
+    },
+    {
+      "jobtitle": "angular web desginer",
+      "joblocation": "hyd",
+      "jdesc": "work from office",
+      "skills": "html javascript react",
+      "recId": "2",
+      "id": 5
+    },
+    {
+      "jobtitle": "react developer",
+      "joblocation": "chennai",
+      "jdesc": "work from home",
+      "skills": "react ,angular ",
+      "recId": "2",
+      "id": 6
+    },
+    {
+      "jobtitle": "frontend desginer",
+      "joblocation": "bangalore",
+      "jdesc": "work from office",
+      "skills": "html,css,angular",
+      "recId": "2",
+      "id": 7
+    }
+  ],
+  "WhoApplied": []
+}

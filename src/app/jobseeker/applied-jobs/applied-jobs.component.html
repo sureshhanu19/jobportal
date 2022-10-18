@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="table">
+        <table class="table table-dark table-bordered">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Job role</th>
+                    <th>Job Location</th>
+                    <th>Job Description</th>
+                    <th>Skills</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of appliedJobData; let i=index">
+                    <td>{{item.id}}</td>
+                    <td>{{item.jobtitle}}</td>
+                    <td>{{item.joblocation}}</td>
+                    <td>{{item.jdesc}}</td>
+                    <td>{{item.skills}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

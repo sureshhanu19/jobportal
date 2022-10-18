@@ -1,0 +1,26 @@
+
+<div class="content">
+    <div class="post">
+        <h1>Post a Job here below:</h1><br>
+        <form [formGroup]="postForm" (ngSubmit)="onPost()">
+            <div class="col-md-4 form-outline">
+                <label class="form-label">Job Title:</label>
+                <input type="text" formControlName="jobtitle" class="form-control form-control-lg"
+                    placeholder="Enter Job Title">
+                <label class="form-label">Job Location:</label>
+                <input type="text" formControlName="joblocation" class="form-control form-control-lg"
+                    placeholder="Enter Job Location">
+                <label class="form-label">Job Description:</label>
+                <textarea type="text" formControlName="jdesc" class="form-control form-control-lg"
+                    placeholder="Enter Job Description"></textarea>
+                <label class="form-label">Skills Required:</label>
+                <input type="text" formControlName="skills" class="form-control form-control-lg"
+                    placeholder="Enter Job Title">
+                    <br>
+            </div>
+            <div class="button">
+                <button class="btn btn-primary btn-lg" type="submit">Post</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<p>search-jobs works!</p>
+
+   <div>
+        <input type="search" class="form-control search-field" placeholder="Search Here" [(ngModel)] = "searchText">
+        <table class="table table-striped table-dark">
+          <thead>
+            <tr>
+              <th scope="col">S.no</th>
+              <th scope="col">Job Title</th>
+              <th scope="col">Job Location</th>
+              <th scope="col">Job Description</th>
+              <th scope="col">Skills</th>
+              <th scope="col">apply</th>
+            </tr>
+          </thead>
+          
+          <tbody class="table">
+            <tr *ngFor="let item of jobdata | search: searchText">
+              <td>{{item.id}}</td>
+              <td>{{item.jobtitle}}</td>
+              <td>{{item.joblocation}}</td>
+              <td>{{item.jdesc}}</td>
+              <td>{{item.skills}}</td>
+              <td>
+                <button class="btn btn-info" (click)="onapply(item)"*ngIf="isapply" >Apply</button>
+               
+                <button class="btn btn-info" *ngIf="isapplied">Applied</button>
+               
+              </td>
+              
+            </tr>
+            
+          </tbody>
+        </table>
+ 
+   </div>

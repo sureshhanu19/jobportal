@@ -1,0 +1,172 @@
+<!-- Section: Design Block -->
+
+    
+<section class="form-registration">
+           
+                        <form action="#" name="registration" [formGroup]="registerForm" (ngSubmit)="collectUser()">
+                            <div class="register">
+                                <h1>Register</h1>
+                                <hr>
+                            </div>
+                            <div *ngIf="isSubmitted" class="alert alert-success alert-dismissible fade show"
+                                role="alert">
+                                <strong>Success!</strong> You Registration has been succcesful!.
+                                <button (click)="closeAlert()" type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+
+                            <label for="name" class="form-label">User Name<span style="color:red">*</span></label>
+                            <input type="text" formControlName="name" class="form-control"
+                                placeholder="Enter Firstname" [ngClass]="{'fieldInvalid':'(minlength)||(required)'}">
+
+                            <div
+                                [hidden]="registerForm.controls['name'].untouched || registerForm.controls['name'].valid">
+                                <div *ngIf="registerForm.controls['name'].hasError('required')" class="text-danger">
+                                     Name is required</div>
+                                <div *ngIf="registerForm.controls['name'].hasError('minlength')" class="text-danger">
+                                     Name must be atleast 5 characters</div>
+                            </div>
+
+
+                            <label for="email" class="form-label">Email address<span style="color:red">*</span></label>
+                            <input type="email" formControlName="email" class="form-control" id="email"
+                                placeholder="Enter Email" [ngClass]="{'fieldInvalid':'(email)||(required)'}">
+
+                            <div
+                                [hidden]="registerForm.controls['email'].untouched || registerForm.controls['email'].valid">
+                                <div *ngIf="registerForm.controls['email'].hasError('required')" class="text-danger">
+                                    Email required</div>
+                                <div *ngIf="registerForm.controls['email'].hasError('email')" class="text-danger">
+                                    Email must be in email format</div>
+                            </div>
+
+                            <label for="password" class="form-label">Password<span style="color:red">*</span></label>
+                            <input type="password" formControlName="password" class="form-control"
+                                placeholder="Enter Password" [ngClass]="{'fieldInvalid':'(pattern)||(required)'}">
+
+                            <div
+                                [hidden]="registerForm.controls['password'].untouched || registerForm.controls['password'].valid">
+                                <div *ngIf="registerForm.controls['password'].hasError('required')" class="text-danger">
+                                    Password required</div>
+                                <div *ngIf="registerForm.controls['password'].hasError('pattern')" class="text-danger">
+                                    Password with atleast 1 Alphabet , 1 Number and 1 Symbol</div>
+                            </div>
+
+                            <label for="phonenumber" class="form-label">Phone Number<span
+                                    style="color:red">*</span></label>
+                            <input type="text" formControlName="phone" class="form-control" id="phone"
+                                placeholder="Enter Phone Number" [ngClass]="{'fieldInvalid':'(pattern)||(required)'}">
+
+                            <div
+                                [hidden]="registerForm.controls['phone'].untouched || registerForm.controls['phone'].valid">
+                                <div *ngIf="registerForm.controls['phone'].hasError('required')" class="text-danger">
+                                    Phone Number required</div>
+                                <div *ngIf="registerForm.controls['phone'].hasError('pattern')" class="text-danger">
+                                    Phone Number must be 10 characters</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob" class="form-label">D.O.B<span style="color:red">*</span></label>
+                            <input class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker
+                                #d="ngbDatepicker" (dateSelect)="onDateSelect($event)" (click)="d.toggle()"
+                                formControlName="dob">
+                            </div>
+                            <label for="type" class="form-label">Type<span style="color:red">*</span></label><br>
+                            <input type="radio" formControlName="type" value="Salaried">Salaried
+                            <input type="radio" formControlName="type" value="Job Seeker">JobSeeker
+
+                            <div
+                                [hidden]="registerForm.controls['type'].untouched || registerForm.controls['type'].valid">
+                                <div *ngIf="registerForm.controls['type'].hasError('required')" class="text-danger">
+                                    Type is required</div>
+                            </div><br>
+                            <label for="gender" class="form-label">Type<span style="color:red">*</span></label><br>
+                            <input type="radio" formControlName="gender" value="male">Male
+                            <input type="radio" formControlName="gender" value="felame">Female
+
+                            <div
+                                [hidden]="registerForm.controls['gender'].untouched || registerForm.controls['gender'].valid">
+                                <div *ngIf="registerForm.controls['gender'].hasError('required')" class="text-danger">
+                                    Gender is required</div>
+                            </div><br>
+                            <label class="control-label col-sm-3">Marital Status</label>
+                                <label class="radio-inline">
+                                    <input type="radio" formControlName="maritalStatus" name="maritalStatus" value="Single" >Single
+                                </label>
+                            <label class="radio-inline">
+                                    <input type="radio" name="maritalStatus" formControlName="maritalStatus" value="Married" checked>Married
+                                </label>
+                                <div
+                                [hidden]="registerForm.controls['maritalStatus'].untouched || registerForm.controls['maritalStatus'].valid">
+                                <div *ngIf="registerForm.controls['maritalStatus'].hasError('required')" class="text-danger">
+                                    Status is required</div>
+                            </div><br>
+                    
+                            <label for="HomeTown" class="form-label">HomeTown<span style="color:red">*</span></label> <br>
+                            <input type="text" formControlName="hometown" placeholder="Enter Address" class="form-control" [ngClass]="{'fieldInvalid':'(minlength)||(required)'}">   
+                            <div
+                            [hidden]="registerForm.controls['hometown'].untouched || registerForm.controls['hometown'].valid">
+                            <div *ngIf="registerForm.controls['hometown'].hasError('required')" class="text-danger">
+                                 Name is required</div>
+                            <div *ngIf="registerForm.controls['hometown'].hasError('minlength')" class="text-danger">
+                                 Name must be atleast 5 characters</div>
+                        </div><br>
+                        <label for="exp" class="control-label">Experience </label><br>
+                        
+                            <input type="number" formControlName="experience" placeholder="Exp. In Years" class="form-control">
+                        
+                        <label class="control-label">Interests(max-3):</label><br>
+                        <select name="interests" class="custom-select" multiple formControlName="interests">
+                            <option value="Angular">Angular</option>
+                            <option value="AI">UI</option>
+                            <option value="JAVA">JAVA</option>
+                            <option value="WEB DEVELOPEMNT">WEB DEVELOPEMNT</option>
+                        </select><br><br>
+
+                        <label for="nationality" class="control-label">Nationality</label>
+                        
+                            <input type="text" id="nationality" formControlName="nationality"  class="form-control"   ><br>
+  
+                            <label for="languages" class="control-label">Languages</label>
+                             <input type="text" id="languages" formControlName="languages"  class="form-control" value="English" ><br>
+                            
+                             <label for="clocation" class=" control-label">Current Location</label>
+                                   <input type="text" id="clocation" formControlName="currentLocation" placeholder="Current Location" class="form-control" ><br>
+                              
+                             <label for="lastexp" class=" control-label">Last Job Experience </label>
+                                        <input type="number" id="lastexp" formControlName="lastjobexp" placeholder="Last Job Exp. In Years" class="form-control"><br>
+                                
+                            <label for="desig" class="col-sm-3 control-label">Last Designation</label>
+                                        
+                                 <input type="text" id="desig" formControlName="lastjobDesig" placeholder="Last Designation" class="form-control"  ><br>
+                               
+                             <label class="col-sm-3 control-label">Select Department</label>
+                                    <select name="department" id="dep" formControlName="department">
+                                                <option value="IT" selected>IT</option>
+                                                <option value="Service">Service</option>
+                                                <option value="Others">Others</option>
+                                            </select><br><br>
+                             <label for="reasons" class="col-sm-3 control-label">Reason For Leaving Last Job</label><br>
+                                <div class="col-sm-9">
+                                    <input type="text" id="reasons" formControlName="reasonsforleaving" placeholder="Not Mandatory" class="form-control"  autofocus><br>
+                                </div>
+                            <div class="col-md-12 text-center mb-3">
+                                <button type="submit" class=" btn btn-block mybtn btn-primary">REGISTER HERE 
+                                    </button>
+                            </div>
+
+
+                            <div class="col-md-12 ">
+                                <div class="form-group">
+                                    <p class="text-center">Already have an account?</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 ">
+                                <div class="form-group">
+                                    <p class="text-center"><a routerLink="/jobseeker/login" id="signin"> login Here</a></p>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+
+<!-- Section: Design Block -->
+

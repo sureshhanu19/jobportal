@@ -1,0 +1,99 @@
+{
+  "register": [
+    {
+      "name": "Hanumanth Suresh",
+      "email": "hanumanthusuresh1993@gmail.com",
+      "password": "suresh@19",
+      "phone": "7382117622",
+      "dob": "2022-09-15",
+      "type": "Salaried",
+      "gender": "male",
+      "maritalStatus": "Single",
+      "hometown": "Srikakulam",
+      "experience": 2,
+      "interests": [
+        "Angular"
+      ],
+      "nationality": "indian",
+      "languages": "english,telugu,hindi",
+      "currentLocation": "hyd",
+      "lastjobexp": 2,
+      "lastjobDesig": "bangalore",
+      "department": "IT",
+      "reasonsforleaving": "not intersed",
+      "id": 1
+    },
+    {
+      "name": "giri durga",
+      "email": "girivelugula@gmail.com",
+      "password": "suresh@19",
+      "phone": "8738214522",
+      "dob": "1994-01-13",
+      "type": "Salaried",
+      "gender": "male",
+      "maritalStatus": "Single",
+      "hometown": "vizag",
+      "experience": 2,
+      "interests": [
+        "WEB DEVELOPEMNT"
+      ],
+      "nationality": "",
+      "languages": "",
+      "currentLocation": "",
+      "lastjobexp": "",
+      "lastjobDesig": "",
+      "department": "",
+      "reasonsforleaving": "",
+      "id": 2
+    },
+    {
+      "name": "naveen",
+      "email": "hemasundar345@gmail.com",
+      "password": "suresh@19",
+      "phone": "9493372275",
+      "dob": "1996-05-15",
+      "type": "Salaried",
+      "gender": "male",
+      "maritalStatus": "Single",
+      "hometown": "Srikakulam",
+      "experience": 2,
+      "interests": [
+        "WEB DEVELOPEMNT"
+      ],
+      "nationality": "indian",
+      "languages": "english,telugu,hindi",
+      "currentLocation": "hyd",
+      "lastjobexp": 2,
+      "lastjobDesig": "bangalore",
+      "department": "Service",
+      "reasonsforleaving": "not intersed",
+      "id": 3
+    }
+  ],
+  "Appliedjobs": [
+    {
+      "jobtitle": "web developer",
+      "joblocation": "hyd",
+      "jdesc": "module developer",
+      "skills": "angular",
+      "recId": "1",
+      "id": 1,
+      "email": "hemasundar345@gmail.com",
+      "userId": "3",
+      "phone": "9493372275",
+      "experience": 2
+    },
+    {
+      "jobtitle": "web desginer",
+      "joblocation": "beng",
+      "jdesc": "module desginer",
+      "skills": "angular react",
+      "recId": "2",
+      "id": 2,
+      "email": "hemasundar345@gmail.com",
+      "userId": "3",
+      "phone": "9493372275",
+      "experience": 2
+    }
+  ]
+}

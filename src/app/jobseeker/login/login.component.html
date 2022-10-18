@@ -1,0 +1,54 @@
+<section class="form-login">
+ 
+ <div *ngIf="isSubmitted" class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Success!</strong> You Login has been succcesful!.
+  <button (click)="closeAlert()" type="button" class="btn-close" data-bs-dismiss="alert"
+    aria-label="Close"></button>
+</div>
+<div *ngIf="isSubmitted2" class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Failed!</strong> You have not not Registered!.
+  <button (click)="closeAlert2()" type="button" class="btn-close" data-bs-dismiss="alert"
+    aria-label="Close"></button>
+</div>
+
+<form action="" method="post" name="login" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+  <div class="log">
+  <div class="login">
+    <h1>Login</h1>
+    <hr>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" name="loginEmail" class="form-control" placeholder="Enter email" formControlName="loginEmail" [ngClass]="{'fieldInvalid':'(minlength)||(required)'}">
+  </div>
+
+  <div *ngIf="loginForm.controls['loginEmail'].hasError('required')" class="text-danger">
+    Email required</div>
+  <div *ngIf="loginForm.controls['loginEmail'].hasError('email')" class="text-danger">
+    Email must be in email format</div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1" class="form-label">Password</label>
+    <input type="password" name="loginPass" class="form-control" placeholder="Enter Password" formControlName="loginPass"[ngClass]="{'fieldInvalid':'(pattern)||(required)'}">
+  </div>
+
+  
+  <div *ngIf="loginForm.controls['loginPass'].hasError('required')" class="text-danger">
+    Password required</div>
+
+  <div class="col-md-12 text-center">
+    <button type="submit" class=" btn btn-block mybtn btn-success tx-tfm">Login</button>
+  </div>
+  <div class="col-md-12 ">
+    <div class="login-or">
+      <hr class="hr-or">
+      <span class="span-or">(or)</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <p class="text-center">Don't have account? <a routerLink="/jobseeker/register" >Sign up
+        here</a></p>
+  </div>
+</div>
+</form>
+</section> 

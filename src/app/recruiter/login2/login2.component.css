@@ -1,0 +1,46 @@
+.form-login {
+    background-image: url('/./assets/hero_1.jpg');
+    padding: 80px;
+}
+
+form{
+    width: 500px;
+    height: 450px;
+   margin-top: 100px;
+    margin-left: 450px;
+    background-color: rgb(11, 14, 18);
+    opacity:0.8 ;
+    padding: 20px;
+    color: antiquewhite; 
+    border-radius: 3%;
+}
+.login {
+    text-align: center;
+    
+    
+}
+.span-or{
+    text-align: center;
+    margin-left: 215px;
+}
+a{
+    list-style: none;
+    text-decoration: none;
+    color: green;
+}
+a:hover{
+    color: crimson;
+    font-size: 20px;
+    border-bottom: 2px solid crimson;
+    transition: 200ms ease-in;
+}
+button{
+    margin-top: 10px;
+}
+.eyeicon{
+    position: relative;
+    bottom: 33px;
+    left: 400px;
+   color: black;
+    cursor: pointer;
+}
